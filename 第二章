@@ -1,0 +1,111 @@
+第二章
+
+Swift Playgrounds
+
+去做,玩的开心,享受游戏
+
+-Michael Jordan
+
+    在WDC2014,苹果宣布所有的iOS设备都将开始使用一个新的编程语言叫做Swift.Swift被称作"快速,现代,安全,可交互的"编程语言.这门语言具有更容易学,编程更有成效的特性.
+
+    在Swift之前,iOS程序基本上是用OC写的.这门语言(OC)已经使用了超过20年,苹果把它当做Mac和iOS设备最基本的编程语言.我曾经和许多有最求的ios开发者讨论过,多数人觉得OC太难学了,语法看起来也很怪异.简单来说,这门代码吓跑了一些刚开始学习iOS编程的人.
+
+
+
+    在我看来,Swift会诱惑更多的web开发者来开发移动软件.如果你是个有其他脚本语言编程经验的web开发者,你能利用你现有的专业知识来学习开发iOS软件的知识.它会让你毫不费力的学习Swift.尽管如此,即便你没有一点编程经验,是个新的不能再新的小白,你同样会发现Swift这门语言很友好,开发软件更舒适.
+
+
+
+    2015年6月,苹果发布Swift2,同时变成了开源的编程语言.苹果在下一盘很大的棋.以后,你可能把Swift用于Linux,再过些日子,你甚至可以用Swift开发安卓软件.谁知道呢?!伴随着这个新的新闻,新版本的Swift有了一些非常棒的特征(比如错误的处理,扩展接口和可用性检查)来让开发者写出更好更漂亮的代码.更重要的,随着Xcode7发布,它进一步的加强了学习这门语言的体验.过一会你就会理解我的意思.
+
+
+
+    我们来体验一下Swift编程语言,看看下面这段代码
+
+    OC
+
+const int count = 10;
+double price = 23.55;
+ 
+NSString *firstMessage = @"Swift is awesome. ";
+NSString *secondMessage = @"What do you think? ";
+NSString *message = [NSString stringWithFormat:@"%@%@", firstMassage,secondMessage];
+ 
+NSLog(@"%@", message);
+
+
+    Swift
+
+let count = 10
+var price = 23.55
+ 
+let firstMessage = "Swift is awesome. "
+let secondMessage = "What do you think?"
+var message = firstMessage +secondMessage
+ 
+print(message)
+    第一段代码用OC写的,第二段代码用Swift写的.你觉得哪个语言更好?我猜应该会觉得Swift更好,尤其是你曾经被OC语言打击过的话.
+
+
+
+    常量和变量是两个最基本的元素.在OC的世界里,当你申明一个变量或者常量的时候你必须详细的说明它的类型信息,它是一个整型还是一个字符串.而在Swift,它介绍了一个叫类型推断的新特征.你不再需要注释一个常量或者变量的类型信息.所有你要做的是用let来声明一个常量,用var来声明一个变量.Swift很聪明,它可以通过审查你输入的值来判断类型.
+
+    你可能注意到分号有所不同.在OC理,你不得不在每一段后面加一个分号.如果忘记做这步,你会收货一个error.我知道很多OC的初学者对于这个错误已经有很丰富的经验了.Swift将会让你的开发者生涯更简单一点,Swift增加了很多有用的特性来让你的代码生涯更流畅.在上面那个例子里,string操作更简单.在OC里,你不得不在NSString和NSMutableString这两个类之间选择来表明这个string是否能被修改.而在Swift里你不用做这样的选择.无论何时你分配一个string当作变量,这个字符串在你的代码里都可以修改.连接字符串超级简单,你仅仅需要用+号连接两个字符串.Swift甚至允许你直接用==
+
+    没有比实实在在的的写代码更好的探索编码的方法了.从Xcode6开始,苹果介绍了一个新的特性叫做Playgrounds.这是一个对开发者来说可交互的开发环境,它可以让开发者尝试Swift编程,然后你可以看到即时的结果.Xcode7增加了一些内联的特性让初学者探索Swift变得更好了.
+
+    假设你已经安装好了Xcode7(或者更高级的版本),登陆.你应该可以看到一个开始的标志.
+
+    Playground在Xcode文件里是一个特别的类型.你可以简单的点击"Get started with a playground"来开启它.然后你要填写项目名字并且选择一个开发平台.你可以用默认的名字或者起一个你自己的名字,记得选择ios平台.一旦你确定,Xcode会打开Playground界面.屏幕的左边区域是你输入代码的地方.当你写下你的代码,Playground会立即翻译你的代码显示在右边部分.Playground有两行默认代码.就像你能看见的那样,str变量的结果马上显示在右边的屏幕上.
+
+    我们将一起写一些代码.记得我们这个操作的目的是让你体验Swift编程和Xcode的更好的主意.我将试着解释我们移动到的代码部分.当然,即使你不理解任何一条代码也没什么问题.我想当确信你会被一些关系所迷惑,比如类和方法.忘记他们代表的意思,你要做的是放松然后和Xcode玩游戏.在下个章节我们讲复习他们.
+
+    Cool!我们开始吧.
+
+    首先,写两行代码.这里我们定义两个变量: 
+
+?
+1
+2
+var message1 = "Hello Swift! How can I get started?"
+var message2 = "The best way to get started is to stop talking and code."
+    当你输入上面的代码时,你会看到在屏幕右边的结果.我们接着添加下面这行
+
+?
+1
+message.uppercaseString
+    Xcode的编辑带有自动补全的特性.自动补全对加速你写代码来说是一个非常便利的特性.当你输入mess,你会看到自动补全窗口显示一些对于你已经输入的词的建议.你要做的仅仅是选择message1然后按下回车.
+
+    Swift使用.来呼出方法和访问变量的属性.当你在message1之后输入. 自动补全窗口会再次出现.它会建议一列.方法和属于变量的属性.你可以继续输入uppercaseString或者从自动补全窗口选择它.一旦你输入完全,你将会马上看到输出.
+
+    继续输入下面的代码:
+
+message2.lowercaseString + " Okey, I'm working on it"
+    Swift允许你用+号连接2个字符串.有趣的是,你可以在代码里使用emoji符号.你可能想知道怎么输入emoji符号.按control+command+空格,emoji菜单就出来了.
+
+    让我们继续写下面的代码:
+
+if message == message2 {
+    print("Same message")
+} else {
+    print("Not the same message")
+}
+    条件逻辑在编程中非常常见.有时候,你会想要一段代码只在特定的条件下出现.if-else语句就是控制程序达到这个目的的一个办法.这里我们用==比较message1和message2.如果他们是一样的,程序会输出"Same message".反之,则会输出"Not the same message".你应该看一下你屏幕上的结果.我们做一些更好玩的事,创造一个标签,一个很普通的用户界面元素:
+
+let messageLabel = UILabel(frame: CGRectMake(0, 0, 300 ,50))
+messageLabel.text = message1
+messageLabel
+    这里我们使用了一个内置的UILabel类来创造一个标签,设置它的尺寸为300X50.然后我们把它的值传入message1.在Playground里预览一个界面元素,你可以点击Quick Look(右边那个眼睛)或者Value History按钮.
+
+    这只是一个简单的label.如果你能改变它的颜色会不会更好?这很简单.你仅仅需要一条代码来定制颜色.此外你还可以把文本居中然后把label编程圆角.写下下面的代码你会看见一个黄色背景的圆角label.
+
+messageLabel.backgroundColor = UIColor.orangeColor()
+messageLabel.textAlignment = NSTextAlignment.Center
+messageLabel.layer.cornerRadius = 10.0
+messageLabel.clipsToBounds = true
+messageLabel
+    这就是iOS SDK的能力.它带来了许多预建的元素同时允许开发者用少量的代码来定制他们.不要误解我.典型的例子,你不需要写代码来搭建用户界面.Xcode提供一个故事版特性让你设计UI的时候可以直接拖动.我们将在下一章说到这个.
+
+    这就是你的Swift初体验.怎么样?有没有爱上它😋 我希望你能发现Swift学习和编码要简单很多.更重要的是,我希望你不要被学习app开发给吓跑了.你可以下载Playground文件以供参考
+
+地址:https://www.dropbox.com/s/y9plgddbsjauhqq/MyPlayground.zip?dl=0
